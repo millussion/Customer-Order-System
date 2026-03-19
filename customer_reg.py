@@ -1,17 +1,5 @@
 def register_client(clients):
-    running = True
-    #eto valida el id numerico de que no ponga letra o yqs
-    while running:
-        try:
-            client_id = int(input("Enter client id: "))
-            running = False
-        except ValueError:
-            print("Invalid id. Only numbers.")
-
-    #valida si se duplica
-    while client_id in clients:
-        print("Client already exists.")
-        client_id = int(input("Enter client id: "))
+    client_id = validation_id(clients, False) #este booleano es lo que controla la funcion dentro de la funcion de validaciones, necesito que sea falso pq no debe existir ese id
     #pide nombre
     name = input("Enter client name: ")
 
