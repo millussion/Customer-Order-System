@@ -1,7 +1,9 @@
+
+from validation import validation_id
 def create_order(orders, clients, products):
 
     running = True
-    #eto valida el id numerico
+    #this validates the numeric ID
     while running:
         try:
             order_id = int(input("Enter order id: "))
@@ -9,24 +11,16 @@ def create_order(orders, clients, products):
         except ValueError:
             print("Invalid order id. Only numbers.")
 
-    #valida duplicado
+    #this validate if the order id is duplicate
     while order_id in orders:
         print("Order already exists.")
         order_id = int(input("Enter order id: "))
 
-    #valida si el cliente ya e existente
-    running = True
-    while running:
-        try:
-            client_id = int(input("Enter client id: "))
-            if client_id in clients:
-                running = False
-            else:
-                print("Client not found.")
-        except ValueError:
-            print("Invalid client id.")
 
-    #valida el producto existente
+    #validate the existing client (the client have to exist/registered before to make an order)
+    client_id = validation_id(clients, True)
+
+    #validate the existing product (have to exist)
     running = True
     while running:
         try:
@@ -38,22 +32,22 @@ def create_order(orders, clients, products):
         except ValueError:
             print("Invalid product id.")
 
-    #valida la cantida
+    #validate the amount, it have to be a int number.
     running = True
     while running:
         try:
             amount = int(input("Enter amount: "))
-            break
+            running = False
         except ValueError:
-            print("Invalid amount.")
+            print("Invalid amount. Only numbers.")
 
-    #obtiene precio del producto desde la tupla el 1 es la posicion del precio dentro de la tupla
+    #gets the product price from the tuple, the 1 is the position of the price inside of the tuple.
     price = products[product_id][1]
 
-    #calcula total
+    #calculate the total for the order, no all
     total = price * amount
 
-    #guarda pedido en el dic
+    #save the order in the dictionary
     orders[order_id] = (client_id, product_id, amount, total)
 
     print("Order created successfully")
