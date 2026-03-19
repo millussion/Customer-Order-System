@@ -51,10 +51,11 @@ _At the end of execution, the system generates:_
  * List of products sold
 ---
  # Authors  👨‍💻
+ * ## Camila Marrugo
  * ## Alfredo Arteta
  * ## Moises Gutierrez
- * ## Camila Marrugo
  * ## Mauricio Onofre
+ * ## Ronaldo Rodriguez
  * ## Ronaldo .
     
 
