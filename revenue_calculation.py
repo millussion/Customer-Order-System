@@ -10,5 +10,5 @@ my_products= products_registration()
 
 r_total= calculate_total(my_products)
 print("=================================================")
-print(f"The total revenue of the day is:{r_total}")
+print(f"The total revenue of the day is: {r_total}")
 print("=================================================")
