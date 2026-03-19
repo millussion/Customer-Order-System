@@ -1,14 +1,3 @@
-
-
-def calculate_total(products):
-    total = 0
-    for name, (price, amount, id) in products.items():
-        total += price * amount
-    return total
-    
-my_products= products_registration()
-
-r_total= calculate_total(my_products)
-print("=================================================")
-print(f"The total revenue of the day is: {r_total}")
-print("=================================================")
+def calculate_total_sales(orders):
+    total_day = sum(order[3] for order in orders.values())
+    return f"Total sales of the day: ${int(total_day):,}"
