@@ -1,6 +1,6 @@
 # Customer-Order-System
 
-## Project Description 📌
+## 📌 Project Description
 
 _This project is a simple Customer Order Management System developed in Python.
 It allows users to register customers, manage products, create orders, and generate sales reports._
@@ -9,7 +9,11 @@ _The main purpose of this system is to replace manual processes (like spreadshee
 
 ---
 
-## System Features ⚙️
+## 📌 Flow Chart
+   
+![Diagrama sin títulwwwo](https://github.com/user-attachments/assets/27292a3a-d9a8-41e8-9c26-40078b670c16)
+
+## 📌 System Features 
 
 _The system includes the following functionalities:_
 
@@ -23,7 +27,7 @@ _The system includes the following functionalities:_
 
 ---
 
-## Technical Approach 🧠 
+## 📌 Technical Approach 
 
  _This project was built using:_
 
@@ -31,7 +35,7 @@ _The system includes the following functionalities:_
   * Tuples → to represent product data (immutable structure)
 ---
 
-## Code Structure 🧩
+## 📌 Code Structure
 
 _The system is modular and uses reusable functions.
 Each function:_
@@ -41,7 +45,7 @@ Each function:_
 *  Avoids direct printing inside logic
 --- 
 
-## System Output 📊
+## 📌 System Output
 
 _At the end of execution, the system generates:_
 
@@ -50,13 +54,14 @@ _At the end of execution, the system generates:_
  * Orders grouped by customer
  * List of products sold
 ---
- # Authors  👨‍💻
+ # Developers:
  * ## Camila Marrugo
+ * ## Ronaldo Rodriguez
  * ## Alfredo Arteta
  * ## Moises Gutierrez
  * ## Mauricio Onofre
- * ## Ronaldo Rodriguez
- * ## Ronaldo .
-    
+
+
+
 
  
