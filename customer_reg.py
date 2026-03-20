@@ -1,21 +1,31 @@
+from validation import validation_id
+
 def register_client(clients):
-    client_id = validation_id(clients, False) #este booleano es lo que controla la funcion dentro de la funcion de validaciones, necesito que sea falso pq no debe existir ese id
-    #pide nombre
+    # Ask for a client ID using a validation function.
+    # The "False" means the ID should NOT already exist in the system.
+    client_id = validation_id(clients, False)
+
+    # Ask the user to enter the client's name
     name = input("Enter client name: ")
 
-    #pide email
+    # Ask the user to enter the client's email
     email = input("Enter client email: ")
-    #validacion para entrar caracteres validos en el correo
 
+    # Keep asking for the email until it has a basic valid format.
+    # The email must contain "@" and "."
     while "@" not in email or "." not in email:
-      print("Invalid email format.")
-      email = input("Enter client email again: ")
+        print("Invalid email format.")
+        email = input("Enter client email again: ")
 
-    clients[client_id] = { #aqui envias la informacion pedida en input
+    # Store the client information in the dictionary.
+    # The client ID is used as the key
+    clients[client_id] = {
         "name": name,
         "email": email
     }
 
+    # Confirm that the client was added successfully
     print("Client registered successfully")
 
+    # Return the updated clients dictionary
     return clients
