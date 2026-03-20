@@ -1,15 +1,11 @@
 
 from validation import validation_id
+from validation import validate_number
+
 def create_order(orders, clients, products):
 
-    running = True
-    #this validates the numeric ID
-    while running:
-        try:
-            order_id = int(input("Enter order id: "))
-            running = False
-        except ValueError:
-            print("Invalid order id. Only numbers.")
+    #validate the id order, it have to be a number.
+    order_id = validate_number("the order id")
 
     #this validate if the order id is duplicate
     while order_id in orders:
@@ -33,13 +29,7 @@ def create_order(orders, clients, products):
             print("Invalid product id.")
 
     #validate the amount, it have to be a int number.
-    running = True
-    while running:
-        try:
-            amount = int(input("Enter amount: "))
-            running = False
-        except ValueError:
-            print("Invalid amount. Only numbers.")
+    amount = validate_number("amount")
 
     #gets the product price from the tuple, the 1 is the position of the price inside of the tuple.
     price = products[product_id][1]
