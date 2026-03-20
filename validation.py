@@ -4,13 +4,13 @@ def validation_id(clients, existe):
         try:
             client_id = int(input("Enter client id: "))
 
-            if existe:  # existe es un valor booleano creado como parametro definido en la funcion entonces si es verdadero que el id existe lo valida y pasa al siguiente
+            if existe:  #exists is a boolean value created as a parameter defined in the function; so if it is true that the id exists, it validates it and moves on to the next.
                 if client_id in clients:
                     return client_id
                 else:
                     print("Client not found.")
 
-            else:  #este es falso que es para registro, si existe dice que existe y vuelve a pedir, si no pasa al sig paso
+            else:  #this is false; it's for registration. If it exists, it says it exists and asks again; if not, it proceeds to the next step.
                 if client_id in clients:
                     print("Client already exists.")
                 else:
@@ -23,6 +23,6 @@ def validate_number(message):
     running = True
     while running:
         try:
-            return int(input(f"Enter {message}: "))
+            return int(input(f"Enter {message}: ")) #converts to an integer and returns to the function where it is being called
         except ValueError:
             print("Invalid input. Only numbers.")
